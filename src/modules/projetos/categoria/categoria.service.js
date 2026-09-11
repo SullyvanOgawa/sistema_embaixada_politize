@@ -9,7 +9,7 @@ export default class CategoriaService{
     async gravar(categorias){
         const categoria = new Categoria(
                                 null,
-                                categorias.name
+                                categorias.nome
                             );
 
         const id = await this.categoriaReposit.gravar(categoria);
@@ -21,7 +21,7 @@ export default class CategoriaService{
     async editar(id, categorias){
         const categoria = new Categoria(
             id, 
-            categorias.name
+            categorias.nome
         );
 
         await this.categoriaReposit.editar(categoria);
