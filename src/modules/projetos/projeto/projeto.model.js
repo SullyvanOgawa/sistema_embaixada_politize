@@ -5,16 +5,14 @@ export default class Projeto{
     #descricao; 
     #dataInicio;
     #prazo; 
-    #ativo;
     #categoria;
 
-    constructor(id, nome, descricao, dataInicio, prazo, ativo, categoria){
+    constructor(id, nome, descricao, dataInicio, prazo, categoria){
         this.#id = id; 
         this.#nome = nome; 
         this.#descricao = descricao; 
         this.#dataInicio = dataInicio;
         this.#prazo = prazo; 
-        this.#ativo = ativo;
         this.#categoria = categoria;
     }
     
@@ -58,14 +56,6 @@ export default class Projeto{
         this.#prazo = prazo;
     }
 
-    get ativo(){
-        return this.#ativo;
-    }
-
-    set ativo(ativo){
-        this.#ativo = ativo;
-    }
-
     get categoria(){
         return this.#categoria;
     }
@@ -81,7 +71,6 @@ export default class Projeto{
             descricao: this.#descricao,
             dataInicio: this.#dataInicio,
             prazo: this.#prazo,
-            ativo: this.#ativo,
             categoria: this.#categoria
         }
     }

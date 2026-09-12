@@ -8,16 +8,14 @@ export default class ProjetoRepositorio{
                                             proj_descricao, 
                                             proj_data_inicio, 
                                             proj_prazo, 
-                                            proj_ativo, 
                                             cat_id) 
-                        VALUES (?, ?, ?, ?, ?, ?)`;
+                        VALUES (?, ?, ?, ?, ?)`;
         
         const parameros = [
             projeto.nome,
             projeto.descricao,
             projeto.dataInicio,
             projeto.prazo,
-            projeto.ativo,
             projeto.categoria.id
         ];
 
@@ -33,7 +31,6 @@ export default class ProjetoRepositorio{
                                         proj_descricao = ?,
                                         proj_data_inicio = ?,
                                         proj_prazo = ?,
-                                        proj_ativo = ?,
                                         cat_id = ?
                     WHERE proj_id = ?`;
         
@@ -42,7 +39,6 @@ export default class ProjetoRepositorio{
             projeto.descricao,
             projeto.dataInicio,
             projeto.prazo,
-            projeto.ativo,
             projeto.categoria.id,
             projeto.id
         ];
@@ -69,8 +65,7 @@ export default class ProjetoRepositorio{
                             proj_nome, 
                             proj_descricao, 
                             proj_data_inicio, 
-                            proj_prazo, 
-                            proj_ativo, 
+                            proj_prazo,  
                             cat_id 
                     FROM projeto WHERE proj_id = ?`;
             parametros = [termoBusca];
@@ -81,7 +76,6 @@ export default class ProjetoRepositorio{
                             proj_descricao, 
                             proj_data_inicio, 
                             proj_prazo, 
-                            proj_ativo,  
                             cat_id 
                     FROM projeto WHERE proj_nome LIKE ?`;
             parametros = [`%${termoBusca}%`];
@@ -103,7 +97,6 @@ export default class ProjetoRepositorio{
                 resultado.proj_descricao,
                 resultado.proj_data_inicio,
                 resultado.proj_prazo,
-                resultado.proj_ativo,
                 categoria
             );
 

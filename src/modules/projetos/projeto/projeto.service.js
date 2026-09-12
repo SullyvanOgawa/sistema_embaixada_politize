@@ -18,7 +18,6 @@ export default class ProjetoService{
             projetos.descricao,
             projetos.dataInicio,
             projetos.prazo,
-            projetos.ativo,
             categoria
         );
 
@@ -37,7 +36,6 @@ export default class ProjetoService{
             projetos.descricao,
             projetos.dataInicio,
             projetos.prazo,
-            projetos.ativo,
             categoria
         );
 
@@ -55,6 +53,8 @@ export default class ProjetoService{
 
         return projetos;
     }
-        
+    
+
+    
         
 }
