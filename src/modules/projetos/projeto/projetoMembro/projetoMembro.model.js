@@ -4,10 +4,10 @@ export default class ProjetoMembro{
     #projeto;
     #membro;
 
-    constructor(id, projeto, memebro){
+    constructor(id, projeto, membro){
         this.#id = id;
         this.#projeto = projeto;
-        this.#membro = memebro;
+        this.#membro = membro;
     }
 
     get id(){

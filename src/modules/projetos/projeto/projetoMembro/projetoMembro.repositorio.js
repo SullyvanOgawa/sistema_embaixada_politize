@@ -1,8 +1,8 @@
 import ProjetoMembro from './projetoMembro.model.js';
-import Projeto from './projeto.model.js';
-import Membro from '../../organizacao/membro/membro.model.js';
+import Projeto from '../projeto.model.js';
+import Membro from '../../../organizacao/membro/membro.model.js';
 import ProjetoMembroRepositorio from './projetoMembro.repositorio.js';
-import pool from '../../../../database/db.js';
+import pool from '../../../../../database/db.js';
 
 export default class ProjetoMembroRepositorio{
     async gravar(projetoMembro){
